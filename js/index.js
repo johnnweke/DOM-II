@@ -21,25 +21,27 @@ mainImg.addEventListener('dblclick', () => {
       }, 500);
 });
 
-//KeyDown - H2 translate
+//Mouseover - H2 translate
 
-// let header2 = document.querySelector('.content-section .text-content h2');
-// header2.addEventListener('keydown', () => {
-//     header2.style.transform = 'translateX(200px)';
-//     //header2.style.transition = 'transform: 0.5s ease-in';
-
-//     setTimeout( () => {
-//         header2.style.transform = 'translateX(-200px)';
-//     }, 1000);
-// }); //DIDN"T WORK
-
-let img2 = document.querySelector('.img-content');
-// console.log(img2);
-img2.addEventListener('keydown', () => {
-    img2.style.transform = 'translateX(200px)';
-    //img2.style.transition = 'transform: 0.5s ease-in';
+let header2 = document.querySelector('.content-section .text-content h2');
+header2.addEventListener('mouseover', () => {
+    header2.style.transition = '0.1s ease-in-out';
+    header2.style.transform = 'rotate(-10deg)';;
+    //header2.style.transition = 'transform: 0.5s ease-in';
 
     setTimeout( () => {
-        img2.style.transform = 'translateX(-200px)';
+        header2.style.transform = 'rotate(0deg)';
+    }, 1000);
+}); 
+
+//move the image
+let img2 = document.querySelector('.img-content');
+// console.log(img2);
+document.addEventListener('keydown', () => {
+    img2.style.transition = '0.7s ease-in';
+    img2.style.transform = 'translateX(200px)';
+   //Return to Original Position
+    setTimeout( () => {
+        img2.style.transform = 'translateX(0px)';
     }, 1000);
 });
